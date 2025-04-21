@@ -1,6 +1,5 @@
 
 import { StepCard } from "@/components/ui/step-card";
-import { CTAButton } from "@/components/ui/cta-button";
 
 export function HowToUseSection() {
   return (
@@ -30,12 +29,6 @@ export function HowToUseSection() {
           title="Cole no Lovable" 
           description="E veja o sistema nascer"
         />
-      </div>
-      
-      <div className="mt-12 text-center">
-        <CTAButton href="https://lovable.dev">
-          Comece agora
-        </CTAButton>
       </div>
     </>
   );

@@ -9,6 +9,7 @@ import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { ExamplesSection } from "@/components/sections/ExamplesSection";
 import { HowToUseSection } from "@/components/sections/HowToUseSection";
 import { TechnicalTipsSection } from "@/components/sections/TechnicalTipsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -35,6 +36,11 @@ const Index = () => {
       {/* Examples Section */}
       <Section className="border-b border-white/5">
         <ExamplesSection />
+      </Section>
+
+      {/* Testimonials Section */}
+      <Section className="border-b border-white/5">
+        <TestimonialsSection />
       </Section>
 
       {/* Subscription Plans Section */}
