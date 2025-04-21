@@ -1,12 +1,14 @@
-import { FeatureCard } from "@/components/ui/feature-card";
+
 import { Section } from "@/components/ui/section";
-import { StepCard } from "@/components/ui/step-card";
-import { TechTipCard } from "@/components/ui/tech-tip-card";
 import { SubscriptionPlans } from "@/components/ui/subscription-plans";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { Check } from "lucide-react";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { ExamplesSection } from "@/components/sections/ExamplesSection";
+import { HowToUseSection } from "@/components/sections/HowToUseSection";
+import { TechnicalTipsSection } from "@/components/sections/TechnicalTipsSection";
 
 const Index = () => {
   return (
@@ -22,143 +24,17 @@ const Index = () => {
 
       {/* About Section */}
       <Section className="border-b border-white/5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Quem é o <span className="text-codigosujo-red">Código Sujo</span>?
-            </h2>
-            <p className="text-gray-300 text-lg mb-6">
-              CÓDIGO SUJO é uma IA treinada para construir, automatizar e arrebentar as barreiras entre ideias e sistemas prontos. 
-              É brutal, eficiente e direto. Nada de tutoriais — aqui é entrega real.
-            </p>
-            <div>
-              <CTAButton href="#features" variant="outline">
-                Ver capacidades
-              </CTAButton>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-0.5 bg-codigosujo-red/20 rounded-lg blur opacity-70"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop" 
-              alt="Código Sujo Digital Engineering" 
-              className="w-full h-auto rounded-lg border border-white/10 relative z-10"
-            />
-            <div className="absolute -bottom-3 -right-3 bg-codigosujo-dark border border-codigosujo-red px-4 py-2 font-mono text-sm z-20">
-              sistema: operacional
-            </div>
-          </div>
-        </div>
+        <AboutSection />
       </Section>
 
       {/* Features Section */}
       <Section id="features" className="border-b border-white/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-          O que ele <span className="text-codigosujo-red">faz</span>
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Capacidades práticas que transformam ideias em sistemas reais, prontos para usar
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-codigosujo-gray p-6 rounded-sm border border-white/10">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-codigosujo-red">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">Clona sites completos</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-codigosujo-gray p-6 rounded-sm border border-white/10">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-codigosujo-red">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">Cria SaaS com login, pagamento Pix e geração de PDF</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-codigosujo-gray p-6 rounded-sm border border-white/10">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-codigosujo-red">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">Faz automações com Playwright, scraping stealth e APIs</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-codigosujo-gray p-6 rounded-sm border border-white/10">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-codigosujo-red">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">Conecta IA, webhooks, e-mail, banco de dados e mais</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-codigosujo-gray p-6 rounded-sm border border-white/10">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-codigosujo-red">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">Cria dashboards completos com filtros, gráficos e tabelas</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-codigosujo-red p-6 rounded-sm">
-            <div className="flex items-start gap-3">
-              <div className="mt-1 text-white">
-                <Check size={22} />
-              </div>
-              <div>
-                <span className="text-white font-bold">E muito mais. Basta pedir.</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <FeaturesSection />
       </Section>
 
       {/* Examples Section */}
       <Section className="border-b border-white/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-          Exemplos <span className="text-codigosujo-red">prontos</span>
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Sistemas reais criados em minutos, prontos para uso imediato
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <FeatureCard 
-            title="Sistema de emissão de boletos com PDF" 
-            description="Gere boletos automaticamente, com gestão completa e exportação em PDF pronta para impressão ou envio digital."
-          />
-          
-          <FeatureCard 
-            title="Dashboard financeiro com login e gráficos interativos" 
-            description="Visualize dados financeiros com gráficos personalizáveis, filtros avançados e sistema de login seguro."
-          />
-          
-          <FeatureCard 
-            title="Site de propostas com assinatura digital e envio por e-mail" 
-            description="Crie, personalize e envie propostas profissionais com sistema de assinatura digital e notificações automáticas."
-          />
-          
-          <FeatureCard 
-            title="Automação que gera leads usando IA e Playwright" 
-            description="Capture leads qualificados automaticamente com busca inteligente e processamento via IA para máxima conversão."
-          />
-        </div>
+        <ExamplesSection />
       </Section>
 
       {/* Subscription Plans Section */}
@@ -168,70 +44,12 @@ const Index = () => {
 
       {/* How to use Section */}
       <Section id="start" className="border-b border-white/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-          Como <span className="text-codigosujo-red">usar</span>
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Processo simples, sem complicação. Da ideia ao sistema pronto em minutos.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StepCard 
-            number="1" 
-            title="Diga o que você quer" 
-            description="Quero um sistema de orçamentos com PDF"
-          />
-          
-          <StepCard 
-            number="2" 
-            title="Receba o prompt técnico" 
-            description="Pronto pra usar no lovable.dev"
-          />
-          
-          <StepCard 
-            number="3" 
-            title="Cole no Lovable" 
-            description="E veja o sistema nascer"
-          />
-        </div>
-        
-        <div className="mt-12 text-center">
-          <CTAButton href="https://lovable.dev" className="animate-pulse">
-            Comece agora
-          </CTAButton>
-        </div>
+        <HowToUseSection />
       </Section>
 
       {/* Technical Tips Section */}
       <Section className="border-b border-white/5">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-          Dicas <span className="text-codigosujo-red">técnicas</span>
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Maximize o potencial dos seus sistemas com estas técnicas profissionais
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <TechTipCard 
-            title="Frontend Rápido" 
-            description="Use o Vercel para publicar sites frontend com alta performance e escalabilidade automática."
-          />
-          
-          <TechTipCard 
-            title="Backend Fácil" 
-            description="Use Replit para testar backends e APIs sem precisar de infraestrutura complexa."
-          />
-          
-          <TechTipCard 
-            title="Autenticação e Dados" 
-            description="Use Firebase para autenticação e banco de dados com mínimo de configuração e máxima seguran��a."
-          />
-          
-          <TechTipCard 
-            title="Automação Invisível" 
-            description="Playwright stealth para automações sem bloqueios, ideal para scraping e interações complexas."
-          />
-        </div>
+        <TechnicalTipsSection />
       </Section>
 
       <Footer />
