@@ -3,6 +3,7 @@ import { FeatureCard } from "@/components/ui/feature-card";
 import { Section } from "@/components/ui/section";
 import { StepCard } from "@/components/ui/step-card";
 import { TechTipCard } from "@/components/ui/tech-tip-card";
+import { SubscriptionPlans } from "@/components/ui/subscription-plans";
 import { Check, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Index = () => {
@@ -22,7 +23,7 @@ const Index = () => {
             </div>
           </div>
           <div>
-            <CTAButton href="#start" variant="outline" className="text-sm px-4 py-2">
+            <CTAButton href="#pricing" variant="outline" className="text-sm px-4 py-2">
               Comece agora
             </CTAButton>
           </div>
@@ -50,7 +51,7 @@ const Index = () => {
             </p>
             
             <div className="pt-4">
-              <CTAButton href="#start">
+              <CTAButton href="#pricing">
                 Comece agora
               </CTAButton>
             </div>
@@ -232,6 +233,11 @@ const Index = () => {
             description="Capture leads qualificados automaticamente com busca inteligente e processamento via IA para máxima conversão."
           />
         </div>
+      </Section>
+
+      {/* Subscription Plans Section */}
+      <Section id="pricing" className="border-b border-white/5">
+        <SubscriptionPlans />
       </Section>
 
       {/* How to use Section */}
