@@ -1,97 +1,23 @@
-import { CTAButton } from "@/components/ui/cta-button";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { Section } from "@/components/ui/section";
 import { StepCard } from "@/components/ui/step-card";
 import { TechTipCard } from "@/components/ui/tech-tip-card";
 import { SubscriptionPlans } from "@/components/ui/subscription-plans";
-import { Check, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { Check } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="bg-codigosujo-dark text-white min-h-screen">
-      {/* Header */}
-      <header className="fixed top-0 left-0 w-full py-6 z-50 bg-codigosujo-darker/80 backdrop-blur-md border-b border-white/5">
-        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/09d558d1-fac1-425c-8925-4d1e2a89d9df.png" 
-              alt="Código Sujo Logo" 
-              className="h-10 w-10 mr-3"
-            />
-            <div className="font-mono font-bold text-xl text-codigosujo-red">
-              CÓDIGO<span className="text-white">/</span>SUJO
-            </div>
-          </div>
-          <div>
-            <CTAButton href="#pricing" variant="outline" className="text-sm px-4 py-2">
-              Comece agora
-            </CTAButton>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <Section fullScreen className="bg-codigosujo-darker pt-28 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-codigosujo-red/20 rounded-full blur-[120px] opacity-30"></div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center relative z-10">
-          <div className="lg:col-span-3 space-y-8">
-            <div className="inline-flex items-center rounded bg-white/5 border border-white/10 px-3 py-1 text-xs font-mono text-white/70">
-              <span className="mr-1 h-2 w-2 rounded-full bg-codigosujo-red"></span>
-              IA de Engenharia Digital
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight">
-              CÓDIGO SUJO — <span className="text-codigosujo-red">O ENGENHEIRO DE GUERRA DIGITAL</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
-              Transforme qualquer ideia em sistema real. Sites, SaaS, dashboards, automações com IA. Pronto em minutos. Sem desculpas.
-            </p>
-            
-            <div className="pt-4">
-              <CTAButton href="#pricing">
-                Comece agora
-              </CTAButton>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-2 hidden lg:block">
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-codigosujo-red/30 rounded-sm blur"></div>
-              <div className="bg-codigosujo-darker p-5 border border-white/10 rounded-sm relative">
-                <div className="font-mono text-xs text-white/70 mb-2"># código_sujo.execute</div>
-                <div className="space-y-2">
-                  <div>
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-codigosujo-red">Iniciando sistema...</span>
-                  </div>
-                  <div>
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-white">Escaneando ambiente...</span>
-                  </div>
-                  <div>
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-white">Detectando requisitos...</span>
-                  </div>
-                  <div>
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-white">Construindo lógica...</span>
-                  </div>
-                  <div>
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-white">Empacotando soluções...</span>
-                  </div>
-                  <div className="animate-pulse">
-                    <span className="text-green-500">{">"}</span> 
-                    <span className="text-codigosujo-red">Sistema pronto para execução...</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HeroSection />
       </Section>
 
       {/* About Section */}
@@ -298,7 +224,7 @@ const Index = () => {
           
           <TechTipCard 
             title="Autenticação e Dados" 
-            description="Use Firebase para autenticação e banco de dados com mínimo de configuração e máxima segurança."
+            description="Use Firebase para autenticação e banco de dados com mínimo de configuração e máxima seguran��a."
           />
           
           <TechTipCard 
@@ -308,44 +234,7 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* Footer Section */}
-      <footer className="bg-codigosujo-darker py-12 border-t border-white/5">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/09d558d1-fac1-425c-8925-4d1e2a89d9df.png" 
-                alt="Código Sujo Logo" 
-                className="h-10 w-10 mr-3"
-              />
-              <div className="font-mono font-bold text-xl text-codigosujo-red">
-                CÓDIGO<span className="text-white">/</span>SUJO
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
-          </div>
-          
-          <div className="border-t border-white/5 mt-8 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} CÓDIGO SUJO. Todos os direitos reservados.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
