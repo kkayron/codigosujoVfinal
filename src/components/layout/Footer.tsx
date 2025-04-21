@@ -1,5 +1,5 @@
 
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import React from 'react';
 
 export function Footer() {
   return (
@@ -16,26 +16,11 @@ export function Footer() {
               CÓDIGO<span className="text-white">/</span>SUJO
             </div>
           </div>
-          
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-              <Instagram size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-              <Github size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-codigosujo-red transition-colors">
-              <Linkedin size={20} />
-            </a>
-          </div>
         </div>
         
         <div className="border-t border-white/5 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} CÓDIGO SUJO. Todos os direitos reservados.
+            © {new Date().getFullYear()} EQUIPE CÓDIGO SUJO. Todos os direitos reservados.
           </p>
         </div>
       </div>
