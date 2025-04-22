@@ -21,8 +21,75 @@
   }
 }
 
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 46, 46, 0.5), 0 0 10px rgba(255, 46, 46, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 46, 46, 0.8), 0 0 30px rgba(255, 46, 46, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 46, 46, 0.5), 0 0 10px rgba(255, 46, 46, 0.2);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .animate-pulse {
   animation: pulse 2s infinite ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 3s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Terminal animations */
+.terminal-container {
+  animation: float 6s infinite ease-in-out;
+}
+
+.terminal-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 46, 46, 0.8), transparent);
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.terminal-text {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
 }
 
 /* Scrollbar styles */
@@ -90,4 +157,56 @@
 .card-hover:hover {
   box-shadow: 0 0 15px rgba(255, 46, 46, 0.3);
   transform: translateY(-5px);
+}
+
+/* Responsive design fixes */
+@media (max-width: 768px) {
+  .terminal-container {
+    margin: 2rem 0;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* Animated background */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(155, 135, 245, 0.1) 0%, rgba(255, 46, 46, 0.05) 25%, transparent 70%);
+  animation: rotate 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse red animation */
+@keyframes pulse-red {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 3s infinite;
 }

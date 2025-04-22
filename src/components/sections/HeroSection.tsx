@@ -48,15 +48,21 @@ export function HeroSection() {
       </div>
       
       <div className="lg:col-span-2 block">
-        <div className="relative">
-          <div className="absolute -inset-0.5 bg-codigosujo-red/30 rounded-sm blur"></div>
-          <div className="bg-codigosujo-darker p-5 border border-white/10 rounded-sm relative">
+        <div className="relative terminal-container">
+          {/* Animated border glow effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-codigosujo-red via-[#9b87f5]/70 to-codigosujo-red rounded-lg blur-sm opacity-75 animate-pulse-red"></div>
+          
+          <div className="bg-codigosujo-darker p-5 border border-white/10 rounded-lg relative terminal-bg">
             <div className="font-mono text-xs text-white/70 mb-2"># código_sujo.execute</div>
             <div className="space-y-2">
               {terminalLines.map((line, index) => (
                 <div key={index} className={`transition-all duration-500 ${index <= activeLineIndex ? 'opacity-100' : 'opacity-0'}`}>
                   <span className="text-green-500">{">"}</span> 
-                  <span className={`${index === terminalLines.length - 1 ? 'text-codigosujo-red' : 'text-white'} ${index === activeLineIndex ? 'after:content-["_"] after:animate-blink' : ''}`}>
+                  <span className={`
+                    ${index === terminalLines.length - 1 ? 'text-codigosujo-red' : 'text-white'} 
+                    ${index === activeLineIndex ? 'after:content-["_"] after:animate-blink' : ''}
+                    terminal-text
+                  `}>
                     {line}
                   </span>
                 </div>

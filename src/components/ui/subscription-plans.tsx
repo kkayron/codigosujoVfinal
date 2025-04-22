@@ -6,14 +6,71 @@ interface PlanLink {
   price: string;
   url: string;
   bestValue?: boolean;
+  features: string[];
 }
 
 const plans: PlanLink[] = [
-  { name: "Mensal", price: "R$ 40,00", url: "https://go.perfectpay.com.br/PPU38CPMOG3" },
-  { name: "Trimestral", price: "R$ 99,90", url: "https://go.perfectpay.com.br/PPU38CPMOO1" },
-  { name: "Semestral", price: "R$ 200,00", url: "https://go.perfectpay.com.br/PPU38CPMOO2", bestValue: true },
-  { name: "Anual", price: "R$ 419,90", url: "https://go.perfectpay.com.br/PPU38CPMOO3" },
-  { name: "Vitalícia", price: "R$ 500,00", url: "https://go.perfectpay.com.br/PPU38CPMOO4" }
+  { 
+    name: "Mensal", 
+    price: "R$ 40,00", 
+    url: "https://go.perfectpay.com.br/PPU38CPMOG3",
+    features: ["Acesso à plataforma 24 horas", "Bônus Exclusivos", "Acesso ao Grupo VIP"]
+  },
+  { 
+    name: "Trimestral", 
+    price: "R$ 99,90", 
+    url: "https://go.perfectpay.com.br/PPU38CPMOO1",
+    features: [
+      "Acesso à plataforma 24 horas", 
+      "Bônus Exclusivos", 
+      "Acesso ao Grupo VIP", 
+      "Suporte às novas Atualizações", 
+      "Acesso ao Suporte Direto com os Desenvolvedores"
+    ]
+  },
+  { 
+    name: "Semestral", 
+    price: "R$ 200,00", 
+    url: "https://go.perfectpay.com.br/PPU38CPMOO2", 
+    bestValue: true,
+    features: [
+      "Acesso à plataforma 24 horas", 
+      "Bônus Exclusivos", 
+      "Acesso ao Grupo VIP", 
+      "Suporte às novas Atualizações", 
+      "Acesso ao Suporte Direto com os Desenvolvedores"
+    ]
+  },
+  { 
+    name: "Anual", 
+    price: "R$ 419,90", 
+    url: "https://go.perfectpay.com.br/PPU38CPMOO3",
+    features: [
+      "Acesso à plataforma 24 horas", 
+      "Bônus Exclusivos", 
+      "Acesso ao Grupo VIP", 
+      "Suporte às novas Atualizações", 
+      "Acesso ao Suporte Direto com os Desenvolvedores",
+      "Vamos hospedar o site para você",
+      "Criar domínios",
+      "Mentoria com os desenvolvedores"
+    ]
+  },
+  { 
+    name: "Vitalícia", 
+    price: "R$ 500,00", 
+    url: "https://go.perfectpay.com.br/PPU38CPMOO4",
+    features: [
+      "Acesso à plataforma 24 horas", 
+      "Bônus Exclusivos", 
+      "Acesso ao Grupo VIP", 
+      "Suporte às novas Atualizações", 
+      "Acesso ao Suporte Direto com os Desenvolvedores",
+      "Vamos hospedar o site para você",
+      "Criar domínios",
+      "Mentoria com os desenvolvedores"
+    ]
+  }
 ];
 
 export function SubscriptionPlans() {
@@ -47,15 +104,15 @@ export function SubscriptionPlans() {
             )}
             <h3 className="font-heading text-xl font-bold mb-2">{plan.name}</h3>
             <p className="text-codigosujo-red text-2xl font-bold mb-4">{plan.price}</p>
-            <div className="mb-7 space-y-1">
-              <div className="text-sm text-white font-medium flex items-center gap-2">
-                <Gem size={18} className="text-yellow-300" />
-                Acesso a plataforma 24 horas
-              </div>
-              <div className="text-sm text-white font-medium flex items-center gap-2">
-                <Gem size={18} className="text-pink-300" />
-                Bonus Exclusivos
-              </div>
+            <div className="mb-7 space-y-2">
+              {plan.features.map((feature, idx) => (
+                <div key={idx} className="text-sm text-white font-medium flex items-center gap-2">
+                  <Gem size={16} className={`
+                    ${idx < 3 ? "text-yellow-300" : idx < 5 ? "text-pink-300" : "text-blue-300"}
+                  `} />
+                  {feature}
+                </div>
+              ))}
             </div>
             <div className="mt-auto z-10">
               <a
