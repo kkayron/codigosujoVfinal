@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface PlanLink {
@@ -113,7 +112,7 @@ export function SubscriptionPlans() {
                 </div>
               ))}
             </div>
-            <div className="mt-auto">
+            <div className="mt-auto flex items-center justify-center">
               <a
                 href={plan.url}
                 target="_blank"
@@ -121,9 +120,9 @@ export function SubscriptionPlans() {
                 className={`
                   w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
                   py-3 transition-all duration-200
-                  text-center
+                  text-center flex items-center justify-center
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2
-                  `}
+                `}
                 style={{ letterSpacing: ".01em" }}
               >
                 Assinar Agora
@@ -136,4 +135,3 @@ export function SubscriptionPlans() {
     </div>
   );
 }
-
