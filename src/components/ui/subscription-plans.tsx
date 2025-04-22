@@ -66,7 +66,7 @@ export function SubscriptionPlans() {
               >
                 <button
                   className={`
-                    w-full flex items-center justify-center gap-2 rounded-lg text-base font-bold py-2.5 px-0
+                    w-full flex items-center justify-center gap-2 rounded-lg text-sm font-bold py-2.5 px-4
                     bg-gradient-to-br from-white/10 via-[#22223b]/60 to-[#9b87f5]/30
                     border border-white/20
                     text-white hover:text-codigosujo-red
@@ -80,7 +80,7 @@ export function SubscriptionPlans() {
                     animate-fade-in
                   `}
                 >
-                  <Gem size={20} className="mr-1 text-yellow-300" />
+                  <Gem size={16} className="mr-1.5 text-yellow-300" />
                   Assinar
                 </button>
               </a>
