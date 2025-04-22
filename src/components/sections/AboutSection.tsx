@@ -1,5 +1,5 @@
 
-import { CTAButton } from "@/components/ui/cta-button";
+import { CustomButton } from "@/components/ui/custom-button";
 
 export function AboutSection() {
   return (
@@ -13,9 +13,7 @@ export function AboutSection() {
           É brutal, eficiente e direto. Nada de tutoriais — aqui é entrega real.
         </p>
         <div>
-          <CTAButton href="#features" variant="outline">
-            Ver capacidades
-          </CTAButton>
+          <CustomButton href="#features" variant="outline" />
         </div>
       </div>
       <div className="relative">

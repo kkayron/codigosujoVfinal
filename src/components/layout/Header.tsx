@@ -1,5 +1,5 @@
 
-import { CTAButton } from "@/components/ui/cta-button";
+import { CustomButton } from "@/components/ui/custom-button";
 
 export function Header() {
   return (
@@ -9,9 +9,7 @@ export function Header() {
           CÓDIGO<span className="text-white">/</span>SUJO
         </div>
         <div>
-          <CTAButton href="#pricing" variant="outline" className="text-sm px-4 py-2">
-            Comece agora
-          </CTAButton>
+          <CustomButton href="#pricing" className="text-sm px-4 py-2" />
         </div>
       </div>
     </header>
