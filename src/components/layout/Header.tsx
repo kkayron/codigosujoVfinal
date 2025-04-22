@@ -9,7 +9,10 @@ export function Header() {
           CÓDIGO<span className="text-white">/</span>SUJO
         </div>
         <div>
-          <CustomButton href="#pricing" className="text-sm px-4 py-2">
+          <CustomButton 
+            href="#pricing" 
+            className="text-sm px-4 py-2"
+          >
             Assinar
           </CustomButton>
         </div>

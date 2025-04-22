@@ -1,13 +1,13 @@
 
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface CustomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   className?: string;
   variant?: "default" | "outline";
-  target?: string; // para links externos nos planos
+  target?: string;
   rel?: string;
-  style?: React.CSSProperties;
 }
 
 export function CustomButton({
@@ -17,30 +17,29 @@ export function CustomButton({
   children,
   target,
   rel,
-  style,
   ...props
 }: CustomButtonProps) {
-  const baseClasses =
-    "group relative text-white font-heading font-semibold text-base px-6 py-3 rounded-[0.6rem] focus-visible:ring-2 focus-visible:ring-codigosujo-red/70 transition-all duration-200 btn-hover-effect";
+  const baseClasses = 
+    "inline-flex items-center justify-center font-heading font-semibold text-base px-6 py-3 rounded-md focus-visible:ring-2 focus-visible:ring-codigosujo-red/70 transition-all duration-200";
+  
   // Determine style based on variant
   const variantClasses =
     variant === "outline"
       ? "bg-transparent border border-codigosujo-red text-codigosujo-red hover:bg-codigosujo-red/10"
-      : "bg-codigosujo-red hover:bg-codigosujo-red/90 shadow-none";
-  const combinedClasses = `${baseClasses} ${variantClasses} ${className}`;
+      : "bg-codigosujo-red hover:bg-codigosujo-red/90 text-white";
+
+  const combinedClasses = cn(baseClasses, variantClasses, className);
 
   if (href) {
-    // Only pass anchor-related props to 'a' tag, avoid passing button events
     return (
       <a
         href={href}
         className={combinedClasses}
         target={target}
         rel={rel}
-        style={style}
         tabIndex={0}
       >
-        <span className="block w-full text-center truncate">{children}</span>
+        {children}
       </a>
     );
   }
@@ -49,10 +48,9 @@ export function CustomButton({
     <button
       type="button"
       className={combinedClasses}
-      style={style}
       {...props}
     >
-      <span className="block w-full text-center truncate">{children}</span>
+      {children}
     </button>
   );
 }

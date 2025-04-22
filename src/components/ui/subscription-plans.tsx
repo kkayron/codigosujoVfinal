@@ -109,16 +109,14 @@ export function SubscriptionPlans() {
             <div className="mb-7 space-y-2">
               {plan.features.map((feature, idx) => (
                 <div key={idx} className="text-sm text-white font-medium flex items-center gap-2">
-                  {/* Removed icons/diamonds for clean look */}
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
-            <div className="mt-auto z-10">
+            <div className="mt-auto">
               <CustomButton
                 href={plan.url}
-                className="w-full text-base font-bold py-3 rounded-xl shadow-md bg-codigosujo-red/90 hover:bg-codigosujo-red text-white border-none transition-all duration-300 transform hover:scale-[1.035] active:scale-95 focus-visible:ring-codigosujo-red focus:outline-none animate-fade-in"
-                style={{ letterSpacing: 0.02, minWidth: "200px", maxWidth: "100%", whiteSpace: "nowrap" }}
+                className="w-full rounded-md font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
               >
