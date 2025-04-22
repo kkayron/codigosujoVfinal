@@ -1,4 +1,3 @@
-
 import { CustomButton } from "@/components/ui/custom-button";
 
 export function AboutSection() {
@@ -13,7 +12,9 @@ export function AboutSection() {
           É brutal, eficiente e direto. Nada de tutoriais — aqui é entrega real.
         </p>
         <div>
-          <CustomButton href="#features" variant="outline" />
+          <CustomButton href="#features" variant="outline">
+            Saiba Mais
+          </CustomButton>
         </div>
       </div>
       <div className="relative">

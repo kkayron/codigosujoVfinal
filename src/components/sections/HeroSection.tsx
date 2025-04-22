@@ -1,4 +1,3 @@
-
 import { CustomButton } from "@/components/ui/custom-button";
 import { useEffect, useState } from "react";
 
@@ -41,7 +40,9 @@ export function HeroSection() {
         </p>
         
         <div className="pt-4">
-          <CustomButton href="#pricing" />
+          <CustomButton href="#pricing">
+            Começar Agora
+          </CustomButton>
         </div>
       </div>
       
