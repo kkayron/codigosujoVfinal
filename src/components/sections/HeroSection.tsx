@@ -36,19 +36,18 @@ export function HeroSection() {
         </h1>
         
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
-          Transforme qualquer ideia em sistema real. Sites, SaaS, dashboards, automações com IA. Pronto em minutos. Sem desculpas.
+          Transforme qualquer ideia em um sistema real. Sites, SaaS, dashboards, automações com IA. Pronto em minutos. Sem enrolação.
         </p>
         
         <div className="pt-4">
           <CustomButton href="#pricing">
-            Começar Agora
+            Comece Agora
           </CustomButton>
         </div>
       </div>
       
       <div className="lg:col-span-2 block">
         <div className="relative terminal-container">
-          {/* Animated border glow effect */}
           <div className="absolute -inset-1 bg-gradient-to-r from-codigosujo-red via-[#9b87f5]/70 to-codigosujo-red rounded-lg blur-sm opacity-75 animate-pulse-red"></div>
           
           <div className="bg-codigosujo-darker p-5 border border-white/10 rounded-lg relative terminal-bg">

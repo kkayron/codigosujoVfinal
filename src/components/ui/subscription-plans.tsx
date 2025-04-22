@@ -1,5 +1,5 @@
 
-import { Gem } from "lucide-react";
+import { CustomButton } from "@/components/ui/custom-button";
 
 interface PlanLink {
   name: string;
@@ -10,66 +10,68 @@ interface PlanLink {
 }
 
 const plans: PlanLink[] = [
-  { 
-    name: "Mensal", 
-    price: "R$ 40,00", 
+  {
+    name: "Mensal",
+    price: "R$ 40,00",
     url: "https://go.perfectpay.com.br/PPU38CPMOG3",
-    features: ["Acesso à plataforma 24 horas", "Bônus Exclusivos", "Acesso ao Grupo VIP"]
+    features: [
+      "Acesso à plataforma 24 horas",
+      "Bônus exclusivos",
+      "Acesso ao grupo VIP"
+    ],
   },
-  { 
-    name: "Trimestral", 
-    price: "R$ 99,90", 
+  {
+    name: "Trimestral",
+    price: "R$ 99,90",
     url: "https://go.perfectpay.com.br/PPU38CPMOO1",
     features: [
-      "Acesso à plataforma 24 horas", 
-      "Bônus Exclusivos", 
-      "Acesso ao Grupo VIP", 
-      "Suporte às novas Atualizações", 
-      "Acesso ao Suporte Direto com os Desenvolvedores"
-    ]
+      "Acesso à plataforma 24 horas",
+      "Bônus exclusivos",
+      "Acesso ao grupo VIP",
+      "Suporte a novas atualizações",
+      "Acesso ao suporte direto com os desenvolvedores"
+    ],
   },
-  { 
-    name: "Semestral", 
-    price: "R$ 200,00", 
-    url: "https://go.perfectpay.com.br/PPU38CPMOO2", 
+  {
+    name: "Semestral",
+    price: "R$ 200,00",
+    url: "https://go.perfectpay.com.br/PPU38CPMOO2",
     bestValue: true,
     features: [
-      "Acesso à plataforma 24 horas", 
-      "Bônus Exclusivos", 
-      "Acesso ao Grupo VIP", 
-      "Suporte às novas Atualizações", 
-      "Acesso ao Suporte Direto com os Desenvolvedores"
-    ]
+      "Acesso à plataforma 24 horas",
+      "Bônus exclusivos",
+      "Acesso ao grupo VIP",
+      "Suporte a novas atualizações",
+      "Acesso ao suporte direto com os desenvolvedores"
+    ],
   },
-  { 
-    name: "Anual", 
-    price: "R$ 419,90", 
+  {
+    name: "Anual",
+    price: "R$ 419,90",
     url: "https://go.perfectpay.com.br/PPU38CPMOO3",
     features: [
-      "Acesso à plataforma 24 horas", 
-      "Bônus Exclusivos", 
-      "Acesso ao Grupo VIP", 
-      "Suporte às novas Atualizações", 
-      "Acesso ao Suporte Direto com os Desenvolvedores",
-      "Vamos hospedar o site para você",
-      "Criar domínios",
+      "Acesso à plataforma 24 horas",
+      "Bônus exclusivos",
+      "Acesso ao grupo VIP",
+      "Suporte a novas atualizações",
+      "Acesso ao suporte direto com os desenvolvedores",
+      "Entregamos o site pronto pra você",
       "Mentoria com os desenvolvedores"
-    ]
+    ],
   },
-  { 
-    name: "Vitalícia", 
-    price: "R$ 500,00", 
+  {
+    name: "Vitalícia",
+    price: "R$ 500,00",
     url: "https://go.perfectpay.com.br/PPU38CPMOO4",
     features: [
-      "Acesso à plataforma 24 horas", 
-      "Bônus Exclusivos", 
-      "Acesso ao Grupo VIP", 
-      "Suporte às novas Atualizações", 
-      "Acesso ao Suporte Direto com os Desenvolvedores",
-      "Vamos hospedar o site para você",
-      "Criar domínios",
+      "Acesso à plataforma 24 horas",
+      "Bônus exclusivos",
+      "Acesso ao grupo VIP",
+      "Suporte a novas atualizações",
+      "Acesso ao suporte direto com os desenvolvedores",
+      "Entregamos o site pronto pra você",
       "Mentoria com os desenvolvedores"
-    ]
+    ],
   }
 ];
 
@@ -81,8 +83,8 @@ export function SubscriptionPlans() {
           Planos de <span className="text-codigosujo-red">Assinatura</span>
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Acesso ao CÓDIGO SUJO e ao poder da automação infinita. 
-          Escolha o plano. Assine. Comece a quebrar o sistema.
+          Tenha acesso ao CÓDIGO SUJO e ao poder da automação. 
+          Escolha o plano, assine e comece a quebrar o sistema.
         </p>
       </div>
 
@@ -107,40 +109,21 @@ export function SubscriptionPlans() {
             <div className="mb-7 space-y-2">
               {plan.features.map((feature, idx) => (
                 <div key={idx} className="text-sm text-white font-medium flex items-center gap-2">
-                  <Gem size={16} className={`
-                    ${idx < 3 ? "text-yellow-300" : idx < 5 ? "text-pink-300" : "text-blue-300"}
-                  `} />
-                  {feature}
+                  {/* Removed icons/diamonds for clean look */}
+                  <span>{feature}</span>
                 </div>
               ))}
             </div>
             <div className="mt-auto z-10">
-              <a
+              <CustomButton
                 href={plan.url}
+                className="w-full text-base font-bold py-3 rounded-xl shadow-md bg-codigosujo-red/90 hover:bg-codigosujo-red text-white border-none transition-all duration-300 transform hover:scale-[1.035] active:scale-95 focus-visible:ring-codigosujo-red focus:outline-none animate-fade-in"
+                style={{ letterSpacing: 0.02, minWidth: "200px", maxWidth: "100%", whiteSpace: "nowrap" }}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full group"
               >
-                <button
-                  className={`
-                    w-full flex items-center justify-center gap-2 rounded-lg text-sm font-bold py-2.5 px-4
-                    bg-gradient-to-br from-white/10 via-[#22223b]/60 to-[#9b87f5]/30
-                    border border-white/20
-                    text-white hover:text-codigosujo-red
-                    shadow-[0_2px_12px_0_rgba(155,135,245,0.14)] focus:outline-none
-                    transition-all duration-300
-                    hover:bg-gradient-to-br hover:from-[#fff]/50 hover:via-[#f3f3f3]/40 hover:to-[#9b87f5]/60
-                    hover:shadow-[0_4px_24px_0_rgba(155,135,245,0.22)]
-                    hover:ring-2 hover:ring-codigosujo-red/30
-                    relative overflow-hidden
-                    before:absolute before:inset-0 before:bg-white/10 before:opacity-0 before:transition-opacity before:duration-200 group-hover:before:opacity-20
-                    animate-fade-in
-                  `}
-                >
-                  <Gem size={16} className="mr-1.5 text-yellow-300" />
-                  Assinar
-                </button>
-              </a>
+                Assinar Agora
+              </CustomButton>
             </div>
           </div>
         ))}

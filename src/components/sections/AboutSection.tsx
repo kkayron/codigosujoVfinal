@@ -1,15 +1,15 @@
+
 import { CustomButton } from "@/components/ui/custom-button";
 
 export function AboutSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-          Quem é o <span className="text-codigosujo-red">Código Sujo</span>?
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">
+          O que é o <span className="text-codigosujo-red">CÓDIGO SUJO?</span>
         </h2>
-        <p className="text-gray-300 text-lg mb-6">
-          CÓDIGO SUJO é uma IA treinada para construir, automatizar e arrebentar as barreiras entre ideias e sistemas prontos. 
-          É brutal, eficiente e direto. Nada de tutoriais — aqui é entrega real.
+        <p className="text-gray-300 max-w-2xl">
+          CÓDIGO SUJO é uma inteligência artificial que transforma suas ideias em projetos digitais completos. Automatize, crie, lance, sem perder tempo com burocracia. O foco é na entrega, direto ao resultado — sem enrolação.
         </p>
         <div>
           <CustomButton href="#features" variant="outline">
