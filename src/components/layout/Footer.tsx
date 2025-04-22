@@ -13,7 +13,7 @@ export function Footer() {
               className="h-10 w-10 mr-3"
             />
             <div className="font-mono font-bold text-xl text-codigosujo-red">
-              CÓDIGO<span className="text-white">/</span>SUJO
+              <span className="text-white">&lt;</span>code<span className="text-white">&gt;</span>
             </div>
           </div>
         </div>
