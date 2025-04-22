@@ -13,14 +13,14 @@ export function Footer() {
               className="h-10 w-10 mr-3"
             />
             <div className="font-mono font-bold text-xl text-codigosujo-red">
-              <span className="text-white">&lt;</span>code<span className="text-white">&gt;</span>
+              CÓDIGO<span className="text-white">/</span>SUJO
             </div>
           </div>
         </div>
         
         <div className="border-t border-white/5 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} EQUIPE CÓDIGO SUJO. Todos os direitos reservados.
+            © {new Date().getFullYear()} CÓDIGO SUJO. Todos os direitos reservados.
           </p>
         </div>
       </div>
