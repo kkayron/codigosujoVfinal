@@ -33,22 +33,27 @@ export function SubscriptionPlans() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className="relative flex flex-col bg-codigosujo-gray border border-white/10 p-5 rounded-md card-hover shadow-[0_2px_24px_2px_rgba(255,46,46,0.18)]"
+            className={`
+              relative flex flex-col bg-codigosujo-gray border border-white/10 p-5 rounded-xl
+              card-hover shadow-xl shadow-codigosujo-darker/40
+              transition-all duration-300
+              ${plan.bestValue ? "ring-2 ring-[#9b87f5]" : "hover:ring-2 hover:ring-codigosujo-red/40"}
+            `}
           >
             {plan.bestValue && (
-              <div className="absolute -top-3 right-0 bg-gradient-to-r from-codigosujo-red via-pink-600 to-yellow-400 px-4 py-1 rounded-tl rounded-br text-xs font-bold shadow-lg animate-pulse">
-                MELHOR VALOR
+              <div className="absolute -top-3 left-4 bg-white/90 text-codigosujo-red font-bold px-4 py-1 rounded-full shadow-md border border-white text-xs uppercase tracking-widest animate-fade-in">
+                Melhor valor
               </div>
             )}
             <h3 className="font-heading text-xl font-bold mb-2">{plan.name}</h3>
             <p className="text-codigosujo-red text-2xl font-bold mb-4">{plan.price}</p>
-            <div className="mb-4 space-y-1">
+            <div className="mb-7 space-y-1">
               <div className="text-sm text-white font-medium flex items-center gap-2">
-                <Gem size={18} className="text-yellow-300 drop-shadow shadow-yellow-100" />
+                <Gem size={18} className="text-yellow-300" />
                 Acesso a plataforma 24 horas
               </div>
               <div className="text-sm text-white font-medium flex items-center gap-2">
-                <Gem size={18} className="text-pink-300 drop-shadow shadow-pink-100" />
+                <Gem size={18} className="text-pink-300" />
                 Bonus Exclusivos
               </div>
             </div>
@@ -61,18 +66,22 @@ export function SubscriptionPlans() {
               >
                 <button
                   className={`
-                    w-full flex items-center justify-center gap-2 rounded-md text-lg font-bold py-3
-                    bg-gradient-to-br from-[#ff2e2e] via-[#f97316] to-[#9b87f5]
-                    hover:from-[#9b87f5] hover:via-[#ff2e2e] hover:to-[#d946ef]
-                    text-white shadow-lg shadow-pink-900/20 transition-all duration-300
-                    ring-2 ring-white/10 hover:ring-codigosujo-red/40 border-none outline-none
-                    relative overflow-hidden 
-                    before:absolute before:inset-0 before:opacity-0 before:bg-white/10 before:transition-opacity before:duration-200 group-hover:before:opacity-60
+                    w-full flex items-center justify-center gap-2 rounded-lg text-base font-bold py-2.5 px-0
+                    bg-gradient-to-br from-white/10 via-[#22223b]/60 to-[#9b87f5]/30
+                    border border-white/20
+                    text-white hover:text-codigosujo-red
+                    shadow-[0_2px_12px_0_rgba(155,135,245,0.14)] focus:outline-none
+                    transition-all duration-300
+                    hover:bg-gradient-to-br hover:from-[#fff]/50 hover:via-[#f3f3f3]/40 hover:to-[#9b87f5]/60
+                    hover:shadow-[0_4px_24px_0_rgba(155,135,245,0.22)]
+                    hover:ring-2 hover:ring-codigosujo-red/30
+                    relative overflow-hidden
+                    before:absolute before:inset-0 before:bg-white/10 before:opacity-0 before:transition-opacity before:duration-200 group-hover:before:opacity-20
                     animate-fade-in
                   `}
                 >
-                  <Gem size={22} className="mr-1 animate-pulse text-yellow-300 drop-shadow" />
-                  🔥 Assinar
+                  <Gem size={20} className="mr-1 text-yellow-300" />
+                  Assinar
                 </button>
               </a>
             </div>
