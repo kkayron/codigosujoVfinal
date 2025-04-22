@@ -6,15 +6,8 @@ export function Footer() {
     <footer className="bg-codigosujo-darker py-12 border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/09d558d1-fac1-425c-8925-4d1e2a89d9df.png" 
-              alt="Código Sujo Logo" 
-              className="h-10 w-10 mr-3"
-            />
-            <div className="font-mono font-bold text-xl text-codigosujo-red">
-              CÓDIGO<span className="text-white">/</span>SUJO
-            </div>
+          <div className="font-mono font-bold text-xl text-codigosujo-red">
+            CÓDIGO<span className="text-white">/</span>SUJO
           </div>
         </div>
         
