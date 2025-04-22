@@ -5,7 +5,7 @@ export function AboutSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
           Quem é o <span className="text-codigosujo-red">Código Sujo</span>?
         </h2>
         <p className="text-gray-300 text-lg mb-6">

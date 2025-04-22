@@ -13,7 +13,7 @@ export function FeaturesSection() {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
+      <h2 className="text-3xl md:text-4xl font-heading font-bold mb-2 text-center">
         O que ele <span className="text-codigosujo-red">faz</span>
       </h2>
       <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
@@ -24,10 +24,10 @@ export function FeaturesSection() {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className={`p-6 rounded-sm ${
+            className={`p-6 rounded-sm transition-all duration-300 ${
               index === features.length - 1 
                 ? "bg-codigosujo-red" 
-                : "bg-codigosujo-gray border border-white/10"
+                : "bg-codigosujo-gray border border-white/10 hover:border-codigosujo-red/50"
             }`}
           >
             <div className="flex items-start gap-3">

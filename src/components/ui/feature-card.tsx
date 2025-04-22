@@ -28,7 +28,7 @@ export function FeatureCard({
           {icon}
         </div>
       )}
-      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-codigosujo-red transition-colors duration-300">{title}</h3>
+      <h3 className="text-xl font-heading font-bold mb-3 text-white group-hover:text-codigosujo-red transition-colors duration-300">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </div>
   );

@@ -18,15 +18,15 @@ export function StepCard({
   return (
     <div 
       className={cn(
-        "bg-codigosujo-gray border border-white/10 p-6 rounded-sm relative",
+        "bg-codigosujo-gray border border-white/10 p-6 rounded-sm relative transition-all duration-300 hover:border-codigosujo-red/50",
         className
       )} 
       {...props}
     >
-      <div className="absolute -top-5 -left-2 bg-codigosujo-red text-white font-mono text-2xl font-bold w-10 h-10 flex items-center justify-center">
+      <div className="absolute -top-5 -left-2 bg-codigosujo-red text-white font-mono text-2xl font-bold w-10 h-10 flex items-center justify-center shadow-lg shadow-codigosujo-red/20">
         {number}
       </div>
-      <h3 className="text-xl font-bold mt-4 mb-3 text-white">{title}</h3>
+      <h3 className="text-xl font-heading font-bold mt-4 mb-3 text-white">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </div>
   );

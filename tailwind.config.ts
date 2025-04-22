@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,6 +22,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'monospace'],
+				heading: ['Space Grotesk', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -29,9 +31,9 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				codigosujo: {
-					red: '#ff3333',
-					dark: '#0A0A0A', 
-					darker: '#050505',
+					red: '#ff2e2e',
+					dark: '#000000', 
+					darker: '#000000',
 					gray: '#222222',
 					light: '#FFFFFF',
 				},
@@ -95,11 +97,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'typing': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'pulse-red': {
+					'0%, 100%': {
+						boxShadow: '0 0 0 0 rgba(255, 46, 46, 0.4)'
+					},
+					'50%': {
+						boxShadow: '0 0 0 10px rgba(255, 46, 46, 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'blink': 'blink 1s step-end infinite',
+				'typing': 'typing 3.5s steps(40, end)',
+				'pulse-red': 'pulse-red 2s infinite'
 			}
 		}
 	},
