@@ -1,5 +1,5 @@
 
-import { CustomButton } from "@/components/ui/custom-button";
+import React from "react";
 
 interface PlanLink {
   name: string;
@@ -114,14 +114,20 @@ export function SubscriptionPlans() {
               ))}
             </div>
             <div className="mt-auto">
-              <CustomButton
+              <a
                 href={plan.url}
-                className="w-full rounded-md font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
+                className={`
+                  w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
+                  py-3 transition-all duration-200
+                  text-center
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2
+                  `}
+                style={{ letterSpacing: ".01em" }}
               >
                 Assinar Agora
-              </CustomButton>
+              </a>
             </div>
           </div>
         ))}
@@ -130,3 +136,4 @@ export function SubscriptionPlans() {
     </div>
   );
 }
+
