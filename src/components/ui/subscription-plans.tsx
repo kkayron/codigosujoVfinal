@@ -39,6 +39,15 @@ export function SubscriptionPlans() {
             )}
             <h3 className="font-heading text-xl font-bold mb-2">{plan.name}</h3>
             <p className="text-codigosujo-red text-2xl font-bold mb-4">{plan.price}</p>
+            {/* Textos solicitados */}
+            <div className="mb-2 space-y-1">
+              <div className="text-sm text-white font-medium">
+                Acesso a plataforma 24 horas
+              </div>
+              <div className="text-sm text-white font-medium">
+                Bonus Exclusivos
+              </div>
+            </div>
             <div className="mt-auto">
               <a
                 href={plan.url}
