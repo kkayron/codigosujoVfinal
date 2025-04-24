@@ -63,7 +63,7 @@ const plans: PlanLink[] = [
     url: "https://go.perfectpay.com.br/PPU38CPMOO4",
     features: [
       "Acesso à plataforma 24 horas",
-      "Bônus exclusivos",
+      "Bônus exclusivos", 
       "Acesso ao grupo VIP",
       "Suporte a novas atualizações",
       "Mentoria com os desenvolvedores"
@@ -84,27 +84,27 @@ export function SubscriptionPlans() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6 max-w-7xl mx-auto px-4">
         {plans.map((plan) => (
           <div
             key={plan.name}
             className={`
-              relative flex flex-col bg-codigosujo-gray border border-white/10 p-5 rounded-xl
+              relative flex flex-col bg-codigosujo-gray border border-white/10 p-6 rounded-xl
               card-hover shadow-xl shadow-codigosujo-darker/40
               transition-all duration-300
               ${plan.bestValue ? "ring-2 ring-[#9b87f5]" : "hover:ring-2 hover:ring-codigosujo-red/40"}
             `}
           >
             {plan.bestValue && (
-              <div className="absolute -top-3 left-4 bg-white/90 text-codigosujo-red font-bold px-4 py-1 rounded-full shadow-md border border-white text-xs uppercase tracking-widest animate-fade-in">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white/90 text-codigosujo-red font-bold px-4 py-1 rounded-full shadow-md border border-white text-xs uppercase tracking-widest">
                 Melhor valor
               </div>
             )}
-            <h3 className="font-heading text-xl font-bold mb-2">{plan.name}</h3>
-            <p className="text-codigosujo-red text-2xl font-bold mb-4">{plan.price}</p>
+            <h3 className="font-heading text-xl text-center font-bold mb-2">{plan.name}</h3>
+            <p className="text-codigosujo-red text-2xl text-center font-bold mb-4">{plan.price}</p>
             <div className="mb-7 space-y-2">
               {plan.features.map((feature, idx) => (
-                <div key={idx} className="text-sm text-white font-medium flex items-center gap-2">
+                <div key={idx} className="text-sm text-white font-medium flex items-center text-left pl-2">
                   <span>{feature}</span>
                 </div>
               ))}
@@ -116,7 +116,7 @@ export function SubscriptionPlans() {
                 rel="noopener noreferrer"
                 className="w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
                   py-3 px-4 transition-all duration-200
-                  text-center  // Changed from text-left to text-center
+                  text-center
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2"
                 style={{ letterSpacing: ".01em" }}
               >
@@ -130,3 +130,4 @@ export function SubscriptionPlans() {
     </div>
   );
 }
+
