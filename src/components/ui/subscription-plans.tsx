@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface PlanLink {
@@ -115,7 +116,7 @@ export function SubscriptionPlans() {
                 rel="noopener noreferrer"
                 className="w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
                   py-3 px-4 transition-all duration-200
-                  text-left
+                  text-center  // Changed from text-left to text-center
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2"
                 style={{ letterSpacing: ".01em" }}
               >
