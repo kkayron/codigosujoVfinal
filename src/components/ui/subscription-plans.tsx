@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface PlanLink {
@@ -54,8 +53,6 @@ const plans: PlanLink[] = [
       "Bônus exclusivos",
       "Acesso ao grupo VIP",
       "Suporte a novas atualizações",
-      "Acesso ao suporte direto com os desenvolvedores",
-      "Entregamos o site pronto pra você",
       "Mentoria com os desenvolvedores"
     ],
   },
@@ -68,8 +65,6 @@ const plans: PlanLink[] = [
       "Bônus exclusivos",
       "Acesso ao grupo VIP",
       "Suporte a novas atualizações",
-      "Acesso ao suporte direto com os desenvolvedores",
-      "Entregamos o site pronto pra você",
       "Mentoria com os desenvolvedores"
     ],
   }
@@ -113,17 +108,15 @@ export function SubscriptionPlans() {
                 </div>
               ))}
             </div>
-            <div className="mt-auto flex items-center justify-center">
+            <div className="mt-auto">
               <a
                 href={plan.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`
-                  w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
-                  py-3 transition-all duration-200
-                  text-center flex items-center justify-start pl-4  // Adicionado text-left e pl-4
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2
-                `}
+                className="w-full block bg-codigosujo-red hover:bg-red-700 text-white text-base font-bold rounded-md
+                  py-3 px-4 transition-all duration-200
+                  text-left
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-codigosujo-red focus-visible:ring-offset-2"
                 style={{ letterSpacing: ".01em" }}
               >
                 Assinar Agora
