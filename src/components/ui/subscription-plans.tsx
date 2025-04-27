@@ -14,7 +14,7 @@ const plans: PlanLink[] = [
   {
     name: "Mensal",
     price: "R$ 40,00",
-    url: "https://go.perfectpay.com.br/PPU38CPMOG3",
+    url: "https://pay.risepay.com.br/Pay/fc5939d898d54a028e42eabfda4dc54c",
     features: [
       "Acesso à plataforma 24 horas",
       "Bônus exclusivos",
@@ -24,7 +24,7 @@ const plans: PlanLink[] = [
   {
     name: "Trimestral",
     price: "R$ 99,90",
-    url: "https://go.perfectpay.com.br/PPU38CPMOO1",
+    url: "https://pay.risepay.com.br/Pay/5a9a4dd99a31494bbc0496a90dc0aef2",
     features: [
       "Acesso à plataforma 24 horas",
       "Bônus exclusivos",
@@ -36,7 +36,7 @@ const plans: PlanLink[] = [
   {
     name: "Semestral",
     price: "R$ 200,00",
-    url: "https://go.perfectpay.com.br/PPU38CPMOO2",
+    url: "https://pay.risepay.com.br/Pay/ad48175363b443dfb93cd243c5393f9f",
     bestValue: true,
     features: [
       "Acesso à plataforma 24 horas",
@@ -49,7 +49,7 @@ const plans: PlanLink[] = [
   {
     name: "Anual",
     price: "R$ 419,90",
-    url: "https://go.perfectpay.com.br/PPU38CPMOO3",
+    url: "https://pay.risepay.com.br/Pay/970fb428169e414db5fab8837ec986dd",
     features: [
       "Acesso à plataforma 24 horas",
       "Bônus exclusivos",
@@ -61,7 +61,7 @@ const plans: PlanLink[] = [
   {
     name: "Vitalícia",
     price: "R$ 500,00",
-    url: "https://go.perfectpay.com.br/PPU38CPMOO4",
+    url: "https://pay.risepay.com.br/Pay/443d85f86f3b4fd2a2b0aed14ccc4b35",
     features: [
       "Acesso à plataforma 24 horas",
       "Bônus exclusivos", 
