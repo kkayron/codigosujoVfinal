@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Check } from "lucide-react";
 
@@ -128,7 +127,7 @@ export function SubscriptionPlans() {
           </div>
         ))}
       </div>
-      <p className="text-sm text-gray-400">Pagamento seguro via PerfectPay</p>
+      <p className="text-sm text-gray-400">Pagamento seguro via RisePay</p>
     </div>
   );
 }
